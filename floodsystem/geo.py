@@ -27,6 +27,7 @@ def stations_with_radius(stations, centre, r):
     while True:
         if pairlist[i][1] < r:
             stationlist.append(pairlist[i][0])
+            i += 1
         else:
             return stationlist
             
