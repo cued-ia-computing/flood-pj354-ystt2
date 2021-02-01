@@ -31,3 +31,18 @@ def stations_with_radius(stations, centre, r):
         else:
             return stationlist
             
+def rivers_with_stations(stations):
+    rivers = set([])
+    for station in stations:
+        rivers.add(station.river)
+    return rivers
+
+def stations_by_river(stations):
+    out = {}
+    for station in stations:
+        river = station.river
+        if river in out:
+            out[river].append(station.name)
+        else:
+            out[river] = [station.name]
+    return out
