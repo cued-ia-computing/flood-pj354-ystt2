@@ -19,7 +19,7 @@ def run():
         if station.name in [
                 'Bourton Dickler', 'Surfleet Sluice', 'Oakington'
         ]:
-            print(station)
+           print(station)
 
 
 if __name__ == "__main__":
@@ -27,4 +27,3 @@ if __name__ == "__main__":
     run()
 
 
-print("hello")
