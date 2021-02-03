@@ -49,23 +49,21 @@ def stations_by_river(stations):
     return out
 
 
-def generate_rivers(stations): #Generate list of list of rivers
+def generate_rivers(stations): #Generate list of list of rivers, 
     Rivers_StationNumber = []
     for i in stations:
         Rivers_StationNumber.append(i.river) 
     return Rivers_StationNumber
 
-def reverse_dictionary(d):
+def reverse_dictionary(d): #guess what this does
     sorted_d = dict(sorted(d.items(), key=operator.itemgetter(1),reverse=True))
     return sorted_d
-
-    
 
 
 def rivers_by_station_number(stations, N):
     Rivers_StationNumber = generate_rivers(stations) #List of Rivers
     RiverCount = Counter(Rivers_StationNumber) #Dictionary
-    Goodboy = reverse_dictionary(RiverCount)
+    Goodboy = reverse_dictionary(RiverCount) # Reverse dictionary to have descending value.
     counter = 0
     FinalList = []
   #  Goodboy = dict(sorted(RiverCount.items(), key=lambda item: item[1]))
@@ -80,19 +78,6 @@ def rivers_by_station_number(stations, N):
         
 
 
-    
-    
-    # for i in Rivers_StationNumber.items(): 
-    #     if i in Rivers_StationNumber:
-    #         for j in i:
-    #             temp.append(j)
-    #             temp.append(0)
-    #             Rivers_D.append(temp)
-    #         print(i[0])
-    #     if i[0] in Rivers_D:
-    #         print("hi")
-    #         river_name = i[0]
-    #         finding_in_river_list(river_name, Rivers_D)
             
         
 

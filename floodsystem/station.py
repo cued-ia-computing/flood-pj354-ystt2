@@ -23,11 +23,11 @@ class MonitoringStation:
             self.name = label[0]
 
         self.coord = coord
-        self.typical_range = typical_range
+        self.typical_range = typical_range #YES T MONEY THERE IS
         self.river = river
         self.town = town
 
-        self.latest_level = None
+        self.latest_level = None #YES WHAT IS THIS T MONEY??? WHAT DOES IT FETCH?
 
     def __repr__(self):
         d = "Station name:     {}\n".format(self.name)
