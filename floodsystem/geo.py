@@ -7,8 +7,9 @@ geographical data.
 """
 
 #just need to fix the importing issues
-
+from collections import Counter
 from .stationdata import build_station_list
+import operator
 from .utils import sorted_by_key  # noqa
 #from haversine import haversine, Unit
 
@@ -48,41 +49,50 @@ def stations_by_river(stations):
     return out
 
 
-def generate_rivers(stations):
+def generate_rivers(stations): #Generate list of list of rivers
     Rivers_StationNumber = []
     for i in stations:
-        Rivers_StationNumber[i.river] = (i.station_id)
+        Rivers_StationNumber.append(i.river) 
     return Rivers_StationNumber
 
-def finding_in_river_list(river_name, Rivers_D): #adding number, Rivers_D is a nested list of the triples.
-    new = []
-    for list in Rivers_D: #List is sub list within Rivers_D, that should contain name, station, number
-        for i in list:
-            if i == river_name:
-                list[2] = list[2] + 1
-                print(list[2])
-    for list in Rivers_D:
-        if list[2] > 1:
-            new.append(list[2])
-    return new
+def reverse_dictionary(d):
+    sorted_d = dict(sorted(d.items(), key=operator.itemgetter(1),reverse=True))
+    return sorted_d
 
     
 
 
 def rivers_by_station_number(stations, N):
-    Rivers_D = [] 
-    Rivers_StationNumber = generate_rivers(stations)
-    for i in Rivers_StationNumber.items(): 
-        if i in Rivers_StationNumber
-        for j in i:
-            temp.append(j)
-        temp.append(0)
-        Rivers_D.append(temp)
-        print(i[0])
-        if i[0] in Rivers_D:
-            print("hi")
-            river_name = i[0]
-            finding_in_river_list(river_name, Rivers_D)
+    Rivers_StationNumber = generate_rivers(stations) #List of Rivers
+    RiverCount = Counter(Rivers_StationNumber) #Dictionary
+    Goodboy = reverse_dictionary(RiverCount)
+    counter = 0
+    FinalList = []
+  #  Goodboy = dict(sorted(RiverCount.items(), key=lambda item: item[1]))
+    for items in Goodboy.items():
+        counter = counter + 1
+        FinalList.append(items)
+        if counter > N-1:
+            break
+    return FinalList
+
+
+        
+
+
+    
+    
+    # for i in Rivers_StationNumber.items(): 
+    #     if i in Rivers_StationNumber:
+    #         for j in i:
+    #             temp.append(j)
+    #             temp.append(0)
+    #             Rivers_D.append(temp)
+    #         print(i[0])
+    #     if i[0] in Rivers_D:
+    #         print("hi")
+    #         river_name = i[0]
+    #         finding_in_river_list(river_name, Rivers_D)
             
         
 
