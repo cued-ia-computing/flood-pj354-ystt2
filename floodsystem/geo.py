@@ -66,7 +66,6 @@ def rivers_by_station_number(stations, N):
     Goodboy = reverse_dictionary(RiverCount) # Reverse dictionary to have descending value.
     counter = 0
     FinalList = []
-  #  Goodboy = dict(sorted(RiverCount.items(), key=lambda item: item[1]))
     for items in Goodboy.items():
         counter = counter + 1
         FinalList.append(items)
@@ -75,7 +74,6 @@ def rivers_by_station_number(stations, N):
     return FinalList
 
 
-        
 
 
             
