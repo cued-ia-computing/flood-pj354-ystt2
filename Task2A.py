@@ -19,8 +19,8 @@ def run():
     ]
     for station in stations:
         if station.name in names:
-            print("Station name and current level: {}, {}".format(
-                station.name, station.latest_level))
+            print("Station name: {} | current level: {} | typical range: {}".format(
+                station.name, station.latest_level, station.typical_range))
 
     # Alternative implementation
     # for station in [s for s in stations if s.name in names]:
