@@ -11,15 +11,15 @@ from collections import Counter
 from .stationdata import build_station_list
 import operator
 from .utils import sorted_by_key  # noqa
-#from haversine import haversine, Unit
+from haversine import haversine, Unit
 
-#def stations_by_distance(stations, p):
- #   pairlist = []
-  #  for station in stations:
-   #     d = haversine(station.coord, p)
-    #    coordpair = (station.name, d)
-     #   pairlist.append(coordpair)
-    #return sorted(pairlist, key=lambda station: station[1])
+def stations_by_distance(stations, p):
+    pairlist = []
+    for station in stations:
+        d = haversine(station.coord, p)
+        coordpair = (station.name, d)
+        pairlist.append(coordpair)
+    return sorted(pairlist, key=lambda station: station[1])
 
 def stations_with_radius(stations, centre, r):
     pairlist = stations_by_distance(stations, centre)
