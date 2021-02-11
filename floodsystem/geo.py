@@ -30,13 +30,13 @@ def stations_with_radius(stations, centre, r):
             stationlist.append(pairlist[i][0])
             i += 1
         else:
-            return stationlist
+            return sorted(stationlist)
             
 def rivers_with_stations(stations):
     rivers = set([])
     for station in stations:
         rivers.add(station.river)
-    return rivers
+    return sorted(list(rivers))
 
 def stations_by_river(stations):
     out = {}
@@ -46,6 +46,8 @@ def stations_by_river(stations):
             out[river].append(station.name)
         else:
             out[river] = [station.name]
+    for key in out:
+        out[key] = sorted(out[key])
     return out
 
 

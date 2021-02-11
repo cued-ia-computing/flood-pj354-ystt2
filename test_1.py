@@ -5,16 +5,16 @@ import itertools
 
 #1B
 def test_stations_by_distance():
-    p = (52.1810, 0.0932)
+    p = (52.2053, 0.1218)
     stations = build_station_list()
-    out = [("Cambridge Byron's Pool", 1.1409229626226685), ('Bin Brook', 1.8453396671939495), ('Haslingfield Burnt Mill', 3.726837709841944), ('Cambridge Jesus Lock', 4.010985535348231), ('Comberton', 5.060586051188609), ('Stapleford', 5.7283910687962685), ('Dernford', 6.145145756795305), ('Girton', 7.0547787706321055), ('Cambridge Baits Bite', 8.40767768506205)]
+    out = [('Cambridge Jesus Lock', 0.840237595667494), ('Bin Brook', 2.502277543239629), ("Cambridge Byron's Pool", 4.07204948005424), ('Cambridge Baits Bite', 5.115596582531859), ('Girton', 5.227077565748483), ('Haslingfield Burnt Mill', 7.0443978959918025), ('Oakington', 7.12825901765745), ('Stapleford', 7.265704342799649), ('Comberton', 7.735085060177142)]
     assert stations_by_distance(stations, p)[0:9] == out
 
 #1C
 def test_stations_with_radius():
-    p = (52.1810, 0.0932)
+    p = (52.2053, 0.1218)
     stations = build_station_list()
-    out = ["Cambridge Byron's Pool", 'Bin Brook', 'Haslingfield Burnt Mill', 'Cambridge Jesus Lock', 'Comberton', 'Stapleford', 'Dernford', 'Girton', 'Cambridge Baits Bite', 'Oakington', 'Babraham']
+    out = ['Bin Brook', 'Cambridge Baits Bite', "Cambridge Byron's Pool", 'Cambridge Jesus Lock', 'Comberton', 'Dernford', 'Girton', 'Haslingfield Burnt Mill', 'Lode', 'Oakington', 'Stapleford']
     assert stations_with_radius(stations, p, 10) == out
 
 #1D
@@ -26,8 +26,8 @@ def test_rivers_with_stations():
 #1D
 def test_stations_by_river():
     stations = build_station_list()
-    out = ['Hemingford', 'Ravenstone Mill Sluice', 'St Ives', 'Welney Causeway', 'Newport Pagnell (Cemetery)', 'Sutton Gault', 'St Neots', 'Stony Stratford', 'Offord', 'Bromham', 'Olney', 'Brackley', 'Godmanchester', 'Bedford', 'Castle Mill (Bedford)', 'Cardington', 'Brampton Sluice', 'Roxton', 'Brownshill', 'Newport Pagnell', 'Earith', 'Thornborough', 'Buckingham', 'Houghton', 'Ely', 'Haversham', 'Sharnbrook', 'Turvey', 'Passenham', 'Eaton Socon']
-    assert stations_by_river(stations)['River Great Ouse'] == out
+    out = ['Cam', 'Cambridge', 'Cambridge Baits Bite', 'Cambridge Jesus Lock', 'Dernford', 'Great Chesterford', 'Weston Bampfylde']
+    assert stations_by_river(stations)['River Cam'] == out
 
 #1E
 def test_rivers_by_station_number():

@@ -17,12 +17,15 @@ def run():
         if station.name in names:
             relative = station.relative_water_level()
             relatives.append((station.name, relative))
-    print (""" --
-relative levels of selected stations: {}
--- """.format(relatives))
+    print ("""--
+relative levels at selected stations: {}
+""".format(relatives))
 
     #part b: demonstrating acquisition of list of over-tolerance stations and their relative levels
-    print ("list of stations over relative level of 1: {}".format(stations_over_threshold(stations, 1)[0:9]))
+    l1 = stations_over_threshold(stations, 1)
+    print ("-- list of stations over relative level of 1 --")
+    for i in range (0,9):
+        print ("{}: {}".format(l1[i][0], l1[i][1]))
 
 if __name__ == "__main__":
     print("*** Task 2A: CUED Part IA Flood Warning System ***")

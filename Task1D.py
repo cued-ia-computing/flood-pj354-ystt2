@@ -4,7 +4,7 @@ import itertools
 
 stations = build_station_list()
 
-print ("first 10 rivers with station, alphabetical: {}".format(list(rivers_with_stations(stations))[0:9]))
+print ("first 10 rivers with station, alphabetical: {}".format(rivers_with_stations(stations)[0:10]))
 
 d1 = stations_by_river(stations)
 

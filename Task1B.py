@@ -5,5 +5,5 @@ import itertools
 stations = build_station_list()
 p = (52.2053, 0.1218)  # coords of cambridge
 
-print("closest 10 stations from cambridge: {}".format(stations_by_distance(stations, p)[0:9]))
+print("closest 10 stations from cambridge: {}".format(stations_by_distance(stations, p)[0:10]))
 print("furthest 10 stations from cambridge: {}".format(stations_by_distance(stations, p)[-10:]))
