@@ -17,9 +17,9 @@ def stations_by_distance(stations, p):
     pairlist = []
     for station in stations:
         d = haversine(station.coord, p)
-        coordpair = (station.name, d)
+        coordpair = (station.name, station.town, d)
         pairlist.append(coordpair)
-    return sorted(pairlist, key=lambda station: station[1])
+    return sorted(pairlist, key=lambda station: station[2])
 
 def stations_with_radius(stations, centre, r):
     pairlist = stations_by_distance(stations, centre)
