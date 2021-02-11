@@ -3,6 +3,6 @@ from floodsystem.geo import stations_by_distance, stations_with_radius, rivers_w
 import itertools
 
 stations = build_station_list()
-p = (52.1810, 0.0932)  # coords of grantchester
+p = (52.2053, 0.1218)  # coords of cambridge
 
-print ("stations witin 10km of grantchester: {}".format(stations_with_radius(stations, p, 10)))
+print ("stations witin 10km of cambridge: {}".format(stations_with_radius(stations, p, 10)))
