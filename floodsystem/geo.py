@@ -21,7 +21,7 @@ def stations_by_distance(stations, p):
         pairlist.append(coordpair)
     return sorted(pairlist, key=lambda station: station[2])
 
-def stations_with_radius(stations, centre, r):
+def stations_within_radius(stations, centre, r):
     pairlist = stations_by_distance(stations, centre)
     i = 0
     stationlist = []
