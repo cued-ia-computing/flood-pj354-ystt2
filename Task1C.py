@@ -4,5 +4,6 @@ import itertools
 
 stations = build_station_list()
 p = (52.2053, 0.1218)  # coords of cambridge
+r = 10 #10 km around
 
 print ("stations witin 10km of cambridge: {}".format(stations_with_radius(stations, p, 10)))

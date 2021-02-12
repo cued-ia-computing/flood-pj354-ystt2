@@ -3,8 +3,10 @@ from floodsystem.geo import stations_by_distance, stations_with_radius, rivers_w
 import itertools
 
 stations = build_station_list()
+l1 = rivers_with_stations(stations)
 
-print ("first 10 rivers with station, alphabetical: {}".format(rivers_with_stations(stations)[0:10]))
+print("total number of stations: {}".format(len(l1)))
+print ("first 10 rivers with station, alphabetical: {}".format(l1[0:10]))
 
 d1 = stations_by_river(stations)
 
