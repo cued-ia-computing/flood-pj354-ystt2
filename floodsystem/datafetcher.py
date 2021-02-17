@@ -9,7 +9,7 @@ latest time history level data
 import datetime
 import json
 import os
-
+import matplotlib
 import dateutil.parser
 import requests
 
@@ -115,9 +115,10 @@ def fetch_measure_levels(measure_id, dt):
 
     # Current time (UTC)
     now = datetime.datetime.utcnow()
-
+    ##Converting datetime into float
+    
     # Start time for data
-    start = now - dt
+    start = now - datetime.timedelta(hours=dt)
 
     # Construct URL for fetching data
     url_base = measure_id
