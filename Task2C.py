@@ -6,10 +6,10 @@ from floodsystem.flood import stations_over_threshold, stations_highest_rel_leve
 def run():
     stations = build_station_list()
     update_water_levels(stations)
-    print ("-- 10 stations with highest risk, with relative levels --")
     l1 = stations_highest_rel_level(stations, 10)
-    for i in range(0,9):
-        print ("{}: {}".format(l1[i][0], l1[i][1]))
+    print ("-- 10 stations with highest risk, with relative levels --")
+    for i in range(0, len(l1)):
+        print ("{}: {}".format(l1[i].name, l1[i].relative_water_level()))
 
 if __name__ == "__main__":
     print("*** Task 2A: CUED Part IA Flood Warning System ***")

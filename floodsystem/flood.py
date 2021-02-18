@@ -9,9 +9,15 @@ def stations_over_threshold(stations, tol):
         if type(relative) == float:
             if relative >= tol:
                 riskstations.append((station.name, relative))
+
+    riskstations = sorted(riskstations, key=lambda x: x[1], reverse = True)
     return riskstations
 
 def stations_highest_rel_level(stations, N):
     risklist = stations_over_threshold(stations, 0)
-    risklist.sort(key=lambda x:x[1])
-    return risklist[-(N+1):-1]
+    ranklist = []
+    for i in range(0,N):
+        for station in stations:
+            if station.name == risklist[i][0]:
+                ranklist.append(station)
+    return ranklist
