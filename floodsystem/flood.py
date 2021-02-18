@@ -9,7 +9,6 @@ def stations_over_threshold(stations, tol):
         if type(relative) == float:
             if relative >= tol:
                 riskstations.append((station.name, relative))
-
     riskstations = sorted(riskstations, key=lambda x: x[1], reverse = True)
     return riskstations
 

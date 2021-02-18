@@ -1,0 +1,250 @@
+[33mcommit cec3ad04e560f69224c06c3391caeb092b12dad8[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Thu Feb 18 09:44:56 2021 +0000
+
+    2b, c
+
+[33mcommit bc2d89cb76a7bb787bf49a1f7a85ade51d50d700[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Wed Feb 17 23:28:40 2021 +0000
+
+    i hope this works t-money :P
+
+[33mcommit b67f304aca6608a8cc3f4cf87f5c1f173286edc7[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Wed Feb 17 17:32:48 2021 +0000
+
+    xac##
+
+[33mcommit d3a6e9a7434f9ab10eea5cd836ae244cc642048c[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Fri Feb 12 09:41:55 2021 +0000
+
+    correct 6
+
+[33mcommit a6e3e961f1c4f79ad17c574f810ab3f1af138d4f[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Fri Feb 12 09:33:15 2021 +0000
+
+    corerection 5
+
+[33mcommit 2ee3b0742211c968f2b09257d061c80dc4df2fc5[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Thu Feb 11 22:55:27 2021 +0000
+
+    correction 4
+
+[33mcommit bf229d3756516528b9dcf78e41595a16ea1e3be2[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Thu Feb 11 22:52:19 2021 +0000
+
+    correction3
+
+[33mcommit 4df80bf2dd0fe5e2b035bbf8a89799a6c6a8f50d[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Thu Feb 11 22:43:04 2021 +0000
+
+    correction 2
+
+[33mcommit 2fe2e67c847ba86a2545a823a35a9825cb1f4a23[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Thu Feb 11 20:09:08 2021 +0000
+
+    corrections 11 feb
+
+[33mcommit 78c8600a1f8df2920fb9813797e15e4b4804f3c1[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sun Feb 7 20:53:03 2021 +0000
+
+    done up to 2c, not test written though
+
+[33mcommit cd6c641bbb7a91f7f6380d534266a5ab479f7cc6[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sun Feb 7 00:36:41 2021 +0000
+
+    pytest done!
+
+[33mcommit 7237c01fdfdffa59f14df308b77ccb35167cb01c[m
+Merge: 85348d3 d2cc3b1
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sat Feb 6 23:28:48 2021 +0000
+
+    Merge branch 'main' of https://github.com/cued-ia-computing/flood-pj354-ystt2
+
+[33mcommit d2cc3b1b5ce22be91b6e71a8c5e0deed89e7663f[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Wed Feb 3 21:06:47 2021 -0500
+
+    I DID IT TUNGSTEN I FINISHED IT
+
+[33mcommit a793ae4e3294f6ea77bfc4cf4d383ab2f1ec8962[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Wed Feb 3 10:44:12 2021 -0500
+
+    FINALLY 1E DOWN
+
+[33mcommit 85348d3b14f18882ba41019c43d77563718891a5[m
+Merge: a22465c f82948f
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Wed Feb 3 15:39:40 2021 +0000
+
+    Merge branch 'main' of https://github.com/cued-ia-computing/flood-pj354-ystt2
+
+[33mcommit f82948f9348c78e5424482150ad3a86c9527fc84[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Wed Feb 3 10:38:28 2021 -0500
+
+    dinally
+
+[33mcommit a22465c0df59412d40b26a62d0bf7d135a08dc13[m
+Merge: e5ea46d 30c4116
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Wed Feb 3 15:03:29 2021 +0000
+
+    Merge branch 'main' of https://github.com/cued-ia-computing/flood-pj354-ystt2
+
+[33mcommit 30c4116e626d728f983bb6f14179da8a292c9a9e[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Wed Feb 3 10:03:15 2021 -0500
+
+    qwdewfbvwbriufhbjk1rnwf
+
+[33mcommit e5ea46d73b00073c6e86fe63177d71322373a3c2[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Tue Feb 2 21:13:08 2021 +0000
+
+    FORMATTING
+
+[33mcommit 9d183f59ed1321caf2ef89cfc21c2db2a7003dc0[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Mon Feb 1 03:39:02 2021 -0500
+
+    ybon
+
+[33mcommit aeb11e728cdd9623a989c5baecad05bb9d70769d[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Mon Feb 1 03:13:57 2021 -0500
+
+    start
+
+[33mcommit 3f1f7ff825bb43f4ad90e958f211646e400a0c27[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Mon Feb 1 03:12:31 2021 -0500
+
+    just testing the commit
+
+[33mcommit 6ce8c712a1e85bfa5fffa43a99ed6f0138600775[m
+Merge: 70aec0a d0ac61a
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Mon Feb 1 01:36:17 2021 +0000
+
+    1d done
+
+[33mcommit 70aec0ace4cba2e323c0ddffdec3274161abb6dd[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Mon Feb 1 01:34:09 2021 +0000
+
+    has been a long day of work. 1b-1d done
+
+[33mcommit d0ac61ac0c6afd45f72ca0d0b286b314967059de[m
+Merge: 7cd7229 63112dd
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Sun Jan 31 16:35:55 2021 -0500
+
+    Merge branch 'main' of https://github.com/cued-ia-computing/flood-pj354-ystt2
+
+[33mcommit 63112dd9ab3032c3ba225fd34adf0ee701572187[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sun Jan 31 21:29:12 2021 +0000
+
+    31jan - 1b and 1c working perfectly
+
+[33mcommit 852ba218c4d877532097aac3dc63c19317dd78eb[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sun Jan 31 18:02:45 2021 +0000
+
+    1c, 1b done
+
+[33mcommit f55ac84755f52ee001d48a18c9306234458a7259[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sun Jan 31 17:00:31 2021 +0000
+
+    sample2
+
+[33mcommit bb8b026391f2ffab3db90d1ef8fe28b99a62d4d6[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sun Jan 31 16:59:24 2021 +0000
+
+    making a sample
+
+[33mcommit bbffa26567717e3c978f6aae1f7da0e50b04f30f[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sun Jan 31 11:16:32 2021 +0000
+
+    removing a text file
+
+[33mcommit 7cd72297ecd92cc6df7aba03993d7ecca057c539[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Sun Jan 31 01:11:02 2021 -0500
+
+    YESSIR
+
+[33mcommit 4da15803ae195f10aeea7ac810a8540b54a1171d[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Sun Jan 31 01:08:48 2021 -0500
+
+    yessir
+
+[33mcommit 0ae8f7ecd34affcd6f31127c18f186b9b07389f1[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Sun Jan 31 01:06:24 2021 -0500
+
+    Create Task1B.py
+
+[33mcommit 17ec9852793c93eb42eca5733f1242a401142c8b[m
+Author: pj354 <78282311+pj354@users.noreply.github.com>
+Date:   Sun Jan 31 00:54:38 2021 -0500
+
+    Create Task1B
+
+[33mcommit c7c59b4e1366785f4736d48bc861df6a8f9e69ee[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sat Jan 30 23:42:27 2021 +0000
+
+    test 3
+
+[33mcommit 6106b2934eeda0a4d1280bd93fb9219339deb8eb[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sat Jan 30 23:39:40 2021 +0000
+
+    test 2
+
+[33mcommit 2e78518a4231a76817351d3b561ee07d96efd38c[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sat Jan 30 23:32:28 2021 +0000
+
+    test
+
+[33mcommit 3e04c0072a9162471c38931930b43dbc619a2d3a[m
+Author: Tungsten <ystt2@cam.ac.uk>
+Date:   Sat Jan 30 23:25:16 2021 +0000
+
+    dfsa
+
+[33mcommit dff986fe338c09cc95ae4536065d81de974e85ed[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Mon Jan 11 11:59:48 2021 +0000
+
+    Setting up GitHub Classroom Feedback
+
+[33mcommit c2f4b2eaf5633a5bc7b8ae17a643ffff2e3b900a[m[33m ([m[1;31morigin/feedback[m[33m)[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Mon Jan 11 11:59:47 2021 +0000
+
+    GitHub Classroom Feedback
+
+[33mcommit d236a8fb919d879e529de0c6247dafd2f6154064[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Mon Jan 11 11:59:45 2021 +0000
+
+    Initial commit
