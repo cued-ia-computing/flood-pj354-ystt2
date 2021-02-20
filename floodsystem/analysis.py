@@ -10,7 +10,7 @@ def poly(dates_float, levels, p):
     d0 = min(dates_float)
     #Converting into polynomial
     poly = np.poly1d(p_coeff)
-    tuple_to_return = ["The offset is : " + str(d0), poly]
+    tuple_to_return = [d0, poly]
     return tuple_to_return
 
 
