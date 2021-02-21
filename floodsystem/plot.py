@@ -2,15 +2,38 @@ from .analysis import poly
 import matplotlib
 import matplotlib.pylab as plt
 import numpy as np
-from datetime import datetime
+from datetime import datetime, timedelta
+from floodsystem.datafetcher import fetch_measure_levels
+
+#for i in range(0,10): #10 days
+#        Difference_from_10_days_ago = timedelta(days=i)
+ #       date_to_append = Today - Difference_from_10_days_ago
+  #      t.append[date_to_append]    
+   
 
 
+def plot_water_level_for_1_station(station):
+    date, level = fetch_measure_levels(
+    station.measure_id, 24*10)
+    date_parameter = round(len(date)/10)
+    level_parameter = round(len(level)/10)
+    #Getting one reading per 10 days
+    t = date[::date_parameter]
+    level = level[::level_parameter]
+    return t, level 
 
-def plot_water_levels(stations, dates, levels):
-    t = [datetime(2016, 12, 30), datetime(2016, 12, 31), datetime(2017, 1, 1),
-     datetime(2017, 1, 2), datetime(2017, 1, 3), datetime(2017, 1, 4),
-     datetime(2017, 1, 5)]
-    
+
+def plot_water_levels(stations):    
+    plt.ylabel("Level of water (Y)")
+    plt.xlabel("Date spaced one day apart for 10 days (X)")
+    plt.title("Graph of water level against time")
+    ListOfWaterLevels = []
+    for i in range(0,5):
+        x,y = plot_water_level_for_1_station(stations[i])
+        plt.plot(x,y, label = stations[i].name)
+    plt.legend()
+    plt.show()
+
 
 
 

@@ -1,14 +1,13 @@
 from floodsystem.plot import plot_water_levels
-from floodsystem import station
+from floodsystem import station, datafetcher, flood
 from floodsystem.stationdata import build_station_list
-from floodsystem import datafetcher
 import matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
 from floodsystem.flood import stations_highest_rel_level
 
-def highest_risk():
-    ranklist = stations_highest_rel_level(stations, 5)
+def highest_risk(stations):
+    ranklist = flood.stations_highest_rel_level(stations, 5)
     return ranklist
 
 def generate_dates_levels(s1):
@@ -18,5 +17,4 @@ def generate_dates_levels(s1):
     return dates_float, levels
 
 stations = build_station_list()
-station_1 = stations[1]
-plot_water_levels(station_1, dates_float, levels)
+plot_water_levels(highest_risk(stations))
