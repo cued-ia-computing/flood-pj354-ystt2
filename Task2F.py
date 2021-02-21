@@ -20,7 +20,7 @@ def identify_5_top_Rivers():
     return stations[1], stations[6], stations[3], stations[4], stations[5]
  
  
-def generate_dates_levels_(s1):
+def generate_dates_levels(s1):
     s1_id = s1.measure_id
     dates_s1, levels = datafetcher.fetch_measure_levels(s1_id,48)
     dates_float = matplotlib.dates.date2num(dates_s1)
@@ -35,7 +35,7 @@ def run():
     list1 = [a,b,c,d,e]
     DataList = [] #Stores dates and levels for each river as a pair
     for i in range(0,5):
-        x,y = generate_dates_levels_(list1[i])
+        x,y = generate_dates_levels(list1[i])
         DataList.append(x)
         DataList.append(y)
     plot_water_level_with_fit(DataList)
