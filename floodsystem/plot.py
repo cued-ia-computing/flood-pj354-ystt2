@@ -69,7 +69,7 @@ def plot_water_level_with_fit(Data):
         print(len(x), len(y))
         d0, poly_object = poly(x,y,3)
         plt.plot(x, poly_object(x))
-        plt.title("This is River " + str(i+1))
+        plt.title("This is River with the no." + str(i+1) + " highest Water Level")
         plt.show()
    
         
