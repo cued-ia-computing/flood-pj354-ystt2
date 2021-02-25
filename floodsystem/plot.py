@@ -11,6 +11,17 @@ from floodsystem.datafetcher import fetch_measure_levels
   #      t.append[date_to_append]    
    
 
+def filter(t, level):
+    for i in level:
+        if type(i) == float:
+            pass
+        else:
+            print("There are issues with the data from the servers here, the relevant station has been plotted as y = 0.")
+            level = np.zeros(len(t))
+    return t, level
+
+
+
 
 def plot_water_level_for_1_station(station):
     date, level = fetch_measure_levels(
@@ -20,12 +31,14 @@ def plot_water_level_for_1_station(station):
     #Getting one reading per 10 days
     t = date[::date_parameter]
     level = level[::level_parameter]
+    t, level = filter(t, level)
     return t, level 
 
 
 def plot_water_levels(stations):    
     plt.ylabel("Level of water (Y)")
     plt.xlabel("Date spaced one day apart for 10 days (X)")
+    plt.xticks(rotation=90)
     plt.title("Graph of water level against time")
     ListOfWaterLevels = []
     for i in range(0,5):
