@@ -12,6 +12,18 @@ def get_poly(station):
     polyfit = poly(dates_float, levels, 4)
     return polyfit
 
+def ddx(y, x): #where y is the function you want to differentiate. Y must be a np.polynomial TYPE!!! 
+#where x is the point at where you want the value of the gradient to be!
+    D = np.polyder(y)
+    value = np.polyval(D, x)
+    return value
+
+def d2dx2(y,x):
+    D = np.polyder(y)
+    D2 = np.polyder(D)
+    value = np.polyval(D2, x)
+    return value
+
 def get_towns(stations):
     def towns_with_stations(stations):
         towns = set([])
@@ -33,25 +45,14 @@ def get_towns(stations):
         townlist.append(town)
     return townlist
 
-def ddx(y, x): #where y is the function you want to differentiate. Y must be a np.polynomial TYPE!!! 
-#where x is the point at where you want the value of the gradient to be!
-    D = np.polyder(y)
-    value = np.polyval(D, x)
-    return value
 
-def d2dx2(y,x):
-    D = np.polyder(y)
-    D2 = np.polyder(D)
-    value = np.polyval(D2, x)
-    return value
 
 def sampling(stations, town):  # town = (name, coord)
     sample_stations = stations_within_radius(stations, town[1], 10)   # sample only stations within 10 km
-
     return sample_stations
 
 
-def critA(station):  #assessing based on current relative level
+def critA(station):  #assessing based on first derivative
     y = get_poly(station)[1]
     x = get_poly(station)[0]
     D = ddx(y, x)
@@ -60,7 +61,7 @@ def critA(station):  #assessing based on current relative level
     else:
         return 0
 
-def critB(station):  #assessing based on current relative level
+def critB(station):  #assessing based on second derivative
     y = get_poly(station)[1]
     x = get_poly(station)[0]
     D2 = d2dx2(y, x)
@@ -69,7 +70,7 @@ def critB(station):  #assessing based on current relative level
     else:
         return 0
 
-def critC(station):
+def critC(station):   #based on current relative level
     rel = station.relative_water_level()
     if type(rel) == float:
         if rel > 2:
@@ -79,7 +80,7 @@ def critC(station):
         else:
             return 2*rel
 
-def critD(station):
+def critD(station):   #based on other stations along the same river
     stations = build_station_list()
     update_water_levels(stations)
     river = station.river

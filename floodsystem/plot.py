@@ -95,7 +95,7 @@ def plot_water_level_with_fit(Data, t_range):
         d0, poly_object = poly(x,y,4)
         plt.plot(x, poly_object(x))
         print("counter" , i)
-        plt.title("This is River with the no." + str(i+1) + " highest level. Range of" + str(trange[i]))
+        plt.title("This is River with the no." + str(i+1) + " highest level. Range of" + str(t_range[i]))
         plt.show()
    
         
