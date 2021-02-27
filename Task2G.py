@@ -1,7 +1,7 @@
 from floodsystem.flood import stations_over_threshold
 from floodsystem.stationdata import build_station_list, update_water_levels
 from floodsystem.flood import stations_over_threshold, stations_highest_rel_level
-from floodsystem.analysis import get_towns, sampling
+from floodsystem.analysis import get_towns, sampling, generate_dates_levels, get_poly, critA, critB, critC, critD, sum_criteria, spatial_average, rate
 
 def run():
     stations = build_station_list()
@@ -15,12 +15,30 @@ def run():
             print ("Town with coordinates: {}".format(town))  # the co-ords acquired by averaging coordinates of stations with station.name == "Bedford"
 
     # demo2: get sample of stations given a certain town
-            print (sampling(stations, town))
+            sample = sampling(stations, town)
+            print ("Stations associated with town: {}".format(sample))
     
-    # demo3: computing each of the criteria scores
-            print (sampling)
-            #print("critA score:{}".format(critA(stations, station)))
-            
+    # demo3: computing each of the criteria scores for a specific station
+            for station in stations:
+                if station.name == sample[0]:
+                    print("--- Example station: {} ---".format(station.name))
+                    print("critA: {}".format(critA(station)))
+                    print("critB: {}".format(critB(station)))
+                    print("critC: {}".format(critC(station)))
+                    print("critD: {}".format(critD(station)))
+
+    # demo4: summing up the criteria scores to get raw scores from each station
+            station_scores = sum_criteria(sample, town, stations)
+            print("each tuple contains (station.name, distance from town centre, raw score): {}".format(station_scores))
+    # demo5: spatial average of raw scores
+            spatial_avg = spatial_average(station_scores)
+            print("spatial average: {}".format(spatial_avg))
+    # demo6: converting spatial average into rating — severe, high, moderate, low
+            print("""
+                    -------
+            the current rating is: 
+            {}
+                    -------""".format(rate(spatial_avg)))
 
 
 if __name__ == "__main__":
