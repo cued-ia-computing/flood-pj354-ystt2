@@ -89,6 +89,8 @@ def critC(station):
     if type(rel) == float:
         if rel > 2:
             return 4
+        elif rel <0:
+            return 0
         else:
             return 2*rel
 
@@ -107,6 +109,8 @@ def critD(station):
     river_mean = np.mean(relatives)
     if river_mean > 2:
         return 2
+    elif river_mean <0:
+        return 0
     else:
         return river_mean  #directly return the mean rel level of the river
 
@@ -130,10 +134,11 @@ def spatial_average (station_scores): #station_scores: list of tuples with (stat
     for i in range(len(station_scores)):
         r = station_scores[i][1]
         raw = station_scores[i][2]
-        weight = 1/r  # can edit to 1/r**2 for different weighting
+        weight = 1/(r**0.2+0.1)  # can edit to 1/r**n for different weighting
         tsum += raw * weight
         tweight += weight
     return(tsum/tweight)
+
 
 def rate(spat):
     if spat > 3:

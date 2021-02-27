@@ -11,12 +11,12 @@ def run():
     t1 = get_towns(stations)
 
     for town in t1:
-        if town[0] == "Bedford":  # note: "Cambridge" is not used as an example because of Cambridge in Gloucestershire (indistinguishable without external database)
+        if town[0] == "Girton":  # note: "Cambridge" is not used as an example because of Cambridge in Gloucestershire (indistinguishable without external database)
             print ("Town with coordinates: {}".format(town))  # the co-ords acquired by averaging coordinates of stations with station.name == "Bedford"
 
     # demo2: get sample of stations given a certain town
             sample = sampling(stations, town)
-            print ("Stations associated with town: {}".format(sample))
+            print ("Stations associated (with 10km) with town: {}".format(sample))
     
     # demo3: computing each of the criteria scores for a specific station
             for station in stations:
