@@ -32,7 +32,7 @@ def plot_water_level_for_1_station(station):
     t = date[::date_parameter]
     level = level[::level_parameter]
     t, level = filter(t, level)
-    return t, level 
+    return t, level, station.typical_range
 
 
 def plot_water_levels(stations):    
@@ -40,7 +40,6 @@ def plot_water_levels(stations):
     plt.xlabel("Date spaced one day apart for 10 days (X)")
     plt.xticks(rotation=90)
     plt.title("Graph of water level against time")
-    ListOfWaterLevels = []
     for i in range(0,5):
         x,y = plot_water_level_for_1_station(stations[i])
         plt.plot(x,y, label = stations[i].name)
@@ -64,11 +63,12 @@ def Making_X_Y_samelength(x,y):
         for i in range(0, len(x) + 1):#
             y_out.append(y[i])
             if len(y_out) == len(x):
-                return x, y_out
+                return x, y_out, trange
+        
 
 
 
-def plot_water_level_with_fit(Data):
+def plot_water_level_with_fit(Data, trange):
     Rivers = []
     for i in range(0,9):
         temporary = []
@@ -78,11 +78,24 @@ def plot_water_level_with_fit(Data):
     for i in range(0,5):
         x,y = Rivers[i]
         if len(x) != len(y):
-            x,y = Making_X_Y_samelength(x,y)
-        print(len(x), len(y))
-        d0, poly_object = poly(x,y,3)
+            x_out = []
+            y_out = []
+            if len(x) > len(y):
+                for j in range(0,len(y) + 1):
+                    x_out.append(x[j])
+                    if len(x_out) == len(y):
+                        x = x_out
+                        break
+            if len(y) > len(x):
+                for k in range(0, len(x) + 1):
+                    y_out.append(y[k])
+                    if len(y_out) == len(x):
+                        y = y_out
+                        break
+        d0, poly_object = poly(x,y,5)
         plt.plot(x, poly_object(x))
-        plt.title("This is River with the no." + str(i+1) + " highest Water Level")
+        print("counter" , i)
+        plt.title("This is River with the no." + str(i+1) + " highest level. Range of" + str(trange[i]))
         plt.show()
    
         
