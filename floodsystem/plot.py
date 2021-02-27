@@ -1,4 +1,4 @@
-from .analysis import poly
+from floodsystem.analysis import poly
 import matplotlib
 import matplotlib.pylab as plt
 import numpy as np
@@ -54,7 +54,7 @@ def plot_water_levels(stations):
 
 
 
-def plot_water_level_with_fit(Data, trange):
+def plot_water_level_with_fit(Data, t_range):
     Rivers = []
     for i in range(0,9):          #creating a list top 9 rivers
         temporary = []
