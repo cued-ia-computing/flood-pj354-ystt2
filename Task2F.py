@@ -22,9 +22,13 @@ def run():
     a,b,c,d,e = identify_5_top_Rivers()
     list1 = [a,b,c,d,e]
     DataList = [] #Stores dates and levels for each river as a pair
+    rangelist = []
     for i in range(0,5):
         x,y, t_range = generate_dates_levels(list1[i])
+        rangelist.append(t_range[1] - t_range[0])
         DataList.append(x)
         DataList.append(y)
-    plot_water_level_with_fit(DataList, t_range)
+
+    plot_water_level_with_fit(DataList, rangelist)
+ 
 run()
