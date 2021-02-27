@@ -51,20 +51,6 @@ def plot_water_levels(stations):
 
 
 
-def Making_X_Y_samelength(x,y):
-    x_out = []
-    y_out = []
-    if len(x) > len(y):
-        for i in range(0,len(y) + 1):
-            x_out.append(x[i])
-            if len(x_out) == len(y):
-                return x_out, y
-    if len(y) > len(x):
-        for i in range(0, len(x) + 1):#
-            y_out.append(y[i])
-            if len(y_out) == len(x):
-                return x, y_out, trange
-        
 
 
 
@@ -93,9 +79,13 @@ def plot_water_level_with_fit(Data, trange):
                         y = y_out
                         break
         d0, poly_object = poly(x,y,4)
+        low_range = [t_range[0]] * len(x)
+        high_range = [t_range[1]] * len(y)
+        plt.plot(x, high_range)
+        plt.plot(x, low_range)
         plt.plot(x, poly_object(x))
         print("counter" , i)
-        plt.title("This is River with the no." + str(i+1) + " highest level. Range of" + str(trange[i]))
+        plt.title("This is River with the no." + str(i+1))
         plt.show()
    
         
