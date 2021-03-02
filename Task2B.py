@@ -22,7 +22,7 @@ relative levels at selected stations: {}
 """.format(relatives))
 
     #part b: demonstrating acquisition of list of over-tolerance stations and their relative levels
-    l1 = stations_over_threshold(stations, 1)
+    l1 = stations_over_threshold(stations, 0.8)
     print ("-- list of stations over relative level of 0.8 --")
     for i in range (0,len(l1)):
         print ("{}: {}".format(l1[i][0], l1[i][1]))

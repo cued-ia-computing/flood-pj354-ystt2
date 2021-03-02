@@ -30,5 +30,6 @@ def run():
         DataList.append(y)
 
     plot_water_level_with_fit(DataList, rangelist)
+    print ("")
  
 run()
