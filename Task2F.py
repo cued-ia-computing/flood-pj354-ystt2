@@ -8,7 +8,7 @@ import matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
  
-def identify_5_top_Rivers():
+def identify_5_top_Rivers(): #This identifies the riskiest Rivers and returns in a list of 5.
     stations = build_station_list()
     risklist = stations_highest_rel_level(stations, 5)
     return risklist[3], risklist[4], risklist[2], risklist[1], risklist[0]
@@ -29,7 +29,7 @@ def run():
         DataList.append(x)
         DataList.append(y)
 
-    plot_water_level_with_fit(DataList, rangelist)
+    plot_water_level_with_fit(DataList, rangelist) #Rangelist here is returns a list of the difference in the highest and lowest water levels depending on the river and returns in a list.
     print ("")
  
 run()
