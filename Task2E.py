@@ -6,11 +6,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from floodsystem.flood import stations_highest_rel_level
 
-def highest_risk(stations):
+def highest_risk(stations): #Finding the highest risk stations (5 of them)
     ranklist = flood.stations_highest_rel_level(stations, 5)
     return ranklist
 
-def generate_dates_levels(s1):
+def generate_dates_levels(s1): #Finding dates and levels for each risky station.
     s1_id = s1.measure_id
     dates_s1, levels = datafetcher.fetch_measure_levels(s1_id,48)
     dates_float = matplotlib.dates.date2num(dates_s1)

@@ -23,35 +23,35 @@ def filter(t, level):
 
 
 
-def plot_water_level_for_1_station(station):
+def plot_water_level_for_1_station(station): #Making all the data for each station nice and plottable so matplotlib doesn't die
     date, level = fetch_measure_levels(
     station.measure_id, 24*10)
     date_parameter = round(len(date)/10)
-    level_parameter = round(len(level)/10)
+    level_parameter = round(len(level)/10) # Data Slicing and rounding^^^
     #Getting one reading per 10 days
     t = date[::date_parameter]
     level = level[::level_parameter]
     t, level = filter(t, level)
-    return t, level, station.typical_range
+    return t, level, station.typical_range #Returnign Typical Range is for 2F.
 
 
 def plot_water_levels(stations):    
     plt.ylabel("Level of water (Y)")
     plt.xlabel("Date spaced one day apart for 10 days (X)")
-    plt.xticks(rotation=90)
+    plt.xticks(rotation=90) #Neater.
     plt.title("Graph of water level against time")
     for i in range(0,5):
-        x,y, trange = plot_water_level_for_1_station(stations[i])
+        x,y, trange = plot_water_level_for_1_station(stations[i])  #Trange not really needed.
         plt.plot(x,y, label = stations[i].name)
     plt.legend()
-    plt.show()
+    plt.show() 
 
 
 
 
 
 
-def Making_X_Y_samelength(x,y):
+def Making_X_Y_samelength(x,y): #Not used anymore.
     x_out = []
     y_out = []
     if len(x) > len(y):
@@ -70,14 +70,14 @@ def Making_X_Y_samelength(x,y):
 
 def plot_water_level_with_fit(Data, t_range):
     Rivers = []
-    for i in range(0,9):          #creating a list top 9 rivers
+    for i in range(0,9):          #Making the Top 5 Riskiest River data in a nicer format to manipulate
         temporary = []
         temporary.append(Data[i])
         temporary.append(Data[i+1])
         Rivers.append(temporary)  
     for i in range(0,5):          #creating 5 graphs for top 5 rivers
         x,y = Rivers[i]
-        if len(x) != len(y):       #normalising x and y
+        if len(x) != len(y):       #making sure the len(River_Level) is the same as len(Dates)
             x_out = []
             y_out = []
             if len(x) > len(y):
@@ -94,9 +94,9 @@ def plot_water_level_with_fit(Data, t_range):
                         break
         d0, poly_object = poly(x,y,4)
         plt.plot(x, poly_object(x))
-        print("counter" , i)
-        plt.title("This is River with the no." + str(i+1) + " highest level. Range of" + str(t_range[i]))
-        plt.show()
+        #Here t_range[i] is the difference in range for the relevant, included in the plot of the respective river.
+        plt.title("This is River with the no." + str(i+1) + " greatest levels of Water. It's range is : " + str(t_range[i])) 
+        plt.show() #1 Plot for each river for better visiblity and scale
    
         
 
