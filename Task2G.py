@@ -11,7 +11,7 @@ def run():
     t1 = get_towns(stations)
 
     for town in t1:
-        if town[0] == "Girton":  # note: "Cambridge" is not used as an example because of Cambridge in Gloucestershire (indistinguishable without external database)
+        if town[0] == "Bedford":  # note: "Cambridge" is not used as an example because of Cambridge in Gloucestershire (indistinguishable without external database)
             print ("Town with coordinates: {}".format(town))  # the co-ords acquired by averaging coordinates of stations with station.name == "Bedford"
 
     # demo2: get sample of stations given a certain town
@@ -30,15 +30,16 @@ def run():
     # demo4: summing up the criteria scores to get raw scores from each station
             station_scores = sum_criteria(sample, town, stations)
             print("each tuple contains (station.name, distance from town centre, raw score): {}".format(station_scores))
-    # demo5: spatial average of raw scores
+    # demo5: spatial average of raw scores of sampled stations around the town
             spatial_avg = spatial_average(station_scores)
             print("spatial average: {}".format(spatial_avg))
-    # demo6: converting spatial average into rating — severe, high, moderate, low
+    # demo6: converting spatial average into rating for a specific town — severe, high, moderate, low
             print("""
                     -------
-            the current rating is: 
+            town: {}
+            the current for rating is: 
             {}
-                    -------""".format(rate(spatial_avg)))
+                    -------""".format(town,rate(spatial_avg)))
 
 
 if __name__ == "__main__":
