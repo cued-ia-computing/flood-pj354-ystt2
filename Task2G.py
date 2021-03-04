@@ -14,7 +14,7 @@ def run():
         if town[0] == "Bedford":  # note: "Cambridge" is not used as an example because of Cambridge in Gloucestershire (indistinguishable without external database)
             print ("Town with coordinates: {}".format(town))  # the co-ords acquired by averaging coordinates of stations with station.name == "Bedford"
 
-    # demo2: get sample of stations given a certain town
+    # demo2: get sample of stations given a certain town 
             sample = sampling(stations, town)
             print ("Stations associated (with 10km) with town: {}".format(sample))
     
@@ -40,7 +40,7 @@ def run():
             the current for rating is: 
             {}
                     -------""".format(town,rate(spatial_avg)))
-
+        
 
 if __name__ == "__main__":
     print("*** Task 2A: CUED Part IA Flood Warning System ***")
