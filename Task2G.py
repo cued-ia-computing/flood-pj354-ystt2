@@ -20,7 +20,7 @@ def run():
     
     # demo3: computing each of the criteria scores for a specific station
             for station in stations:
-                if station.name == sample[0]:
+                if station.name == sample[1]:
                     print("--- Example station: {} ---".format(station.name))
                     print("critA: {}".format(critA(station)))
                     print("critB: {}".format(critB(station)))
