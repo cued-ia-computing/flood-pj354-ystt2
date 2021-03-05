@@ -17,7 +17,7 @@ def plot_water_level_with_fit(station, dates, levels, p):
     plt.xlabel('dates --> nums (w/ shift)')
     plt.ylabel('Water Level (m)')
     plt.xticks(rotation=90)
-    plt.title("Graph with a level of shift :" +str(t))
+    plt.title("Graph with a level of shift :" +str(t) +"/n and name of River : " + str(station))
     plt.legend()
     plt.xlim(d[-1],d[0])
     if 1 + 1 == 2:

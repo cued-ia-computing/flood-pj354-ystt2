@@ -10,11 +10,13 @@ def run():
     stations = build_station_list() #intialising
     update_water_levels(stations)
     big = stations_highest_rel_level(stations, 5)
+    print(len(big))
     stations_list = []
     for station in big:
        stations_list.append(stations[0])
+    print(big)
     dt = 48
-    for station in stations_list:
+    for station in big:
         dates, levels = fetch_measure_levels(station.measure_id, dt)
         if dates==[]:
             print("empty")
