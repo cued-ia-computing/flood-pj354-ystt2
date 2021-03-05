@@ -1,7 +1,7 @@
 from .stationdata import build_station_list, update_water_levels
 
 
-def stations_over_threshold(stations, tol):
+def stations_level_over_threshold(stations, tol):
     update_water_levels(stations)
     riskstations = []
     for station in stations:
@@ -13,7 +13,7 @@ def stations_over_threshold(stations, tol):
     return riskstations
 
 def stations_highest_rel_level(stations, N):
-    risklist = stations_over_threshold(stations, 0)
+    risklist = stations_level_over_threshold(stations, 0)
     ranklist = []
     for i in range(0,N):
         for station in stations:

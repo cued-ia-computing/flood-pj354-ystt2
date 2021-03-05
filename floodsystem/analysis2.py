@@ -5,12 +5,9 @@ from haversine import haversine, Unit
 from floodsystem.geo import stations_by_distance, stations_within_radius, stations_by_river
 from . import datafetcher
 from floodsystem.stationdata import build_station_list, update_water_levels
-from floodsystem.analysis import generate_dates_levels, poly
+from floodsystem.analysis import polyfit, get_poly
 
-def get_poly(station):
-    dates_float, levels, trange = generate_dates_levels(station)
-    polyfit = poly(dates_float, levels, 4)
-    return polyfit
+
 
 def ddx(y, x): #where y is the function you want to differentiate. Y must be a np.polynomial TYPE!!! 
 #where x is the point at where you want the value of the gradient to be!

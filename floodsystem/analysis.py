@@ -14,3 +14,8 @@ def polyfit(dates, levels, p):
     p_coeff = np.polyfit(shifted_dates, levels, p) #remember p is the polynomial order parameter!
     poly = np.poly1d(p_coeff)
     return poly, y_shift, shifted_dates
+
+def get_poly(station):
+    dates_float, levels, trange = generate_dates_levels(station)
+    polyfit = polyfit(dates_float, levels, 4)
+    return polyfit
