@@ -20,7 +20,7 @@ def run():
     
     # demo3: computing each of the criteria scores for a specific station
             for station in stations:
-                if station.name == sample[1]:
+                if station.name == sample[0]:
                     print("--- Example station: {} ---".format(station.name))
                     print("critA: {}".format(critA(station)))
                     print("critB: {}".format(critB(station)))
@@ -37,8 +37,7 @@ def run():
             print("""
                     -------
             town: {}
-            the current for rating is: 
-            {}
+            the current for rating is: {}
                     -------""".format(town,rate(spatial_avg)))
         
 

@@ -50,6 +50,11 @@ def sampling(stations, town):  # town = (name, coord)
 
 
 def critA(station):  #assessing based on first derivative
+    try:
+        get_poly(station)
+        pass
+    except TypeError:
+        return 0
     y = get_poly(station)[1]
     x = get_poly(station)[0]
     D = ddx(y, x)
@@ -59,6 +64,11 @@ def critA(station):  #assessing based on first derivative
         return 0
 
 def critB(station):  #assessing based on second derivative
+    try:
+        get_poly(station)
+        pass
+    except TypeError:
+        return 0
     y = get_poly(station)[1]
     x = get_poly(station)[0]
     D2 = d2dx2(y, x)

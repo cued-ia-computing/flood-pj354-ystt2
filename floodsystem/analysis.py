@@ -16,6 +16,16 @@ def polyfit(dates, levels, p):
     poly = np.poly1d(p_coeff)
     return poly, y_shift, shifted_dates
 
+def poly(dates_float, levels, p):   #obsolete. used only for task 2g
+    #Finding the coefficients
+    p_coeff = np.polyfit(dates_float, levels, p) 
+    #Shifting the X axis 
+    d0 = max(dates_float)
+    #Converting into polynomial
+    poly = np.poly1d(p_coeff) # POLYNOMIAL OBJECT HERE!!!! TUNGSTEN YOU MY CUTIE PIE
+    tuple_to_return = (d0, poly)
+    return tuple_to_return
+
 def generate_dates_levels(s1):
     s1_id = s1.measure_id
     dates_s1, levels = fetch_measure_levels(s1_id,48)
@@ -24,7 +34,5 @@ def generate_dates_levels(s1):
 
 def get_poly(station):
     dates_float, levels, trange = generate_dates_levels(station)
-    print (levels)
-    print (dates_float)
-    a,b,c = polyfit(dates_float, levels, 3)
-    return (a,b,c)
+    polyfit = poly(dates_float, levels, 4)
+    return polyfit
