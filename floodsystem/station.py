@@ -6,7 +6,6 @@ for manipulating/modifying station data
 
 """
 
-
 class MonitoringStation:
     """This class represents a river level monitoring station"""
 
@@ -23,11 +22,11 @@ class MonitoringStation:
             self.name = label[0]
 
         self.coord = coord
-        self.typical_range = typical_range
+        self.typical_range = typical_range #YES T MONEY THERE IS
         self.river = river
         self.town = town
 
-        self.latest_level = None
+        self.latest_level = None #YES WHAT IS THIS T MONEY??? WHAT DOES IT FETCH?
 
     def __repr__(self):
         d = "Station name:     {}\n".format(self.name)
@@ -38,3 +37,28 @@ class MonitoringStation:
         d += "   river:         {}\n".format(self.river)
         d += "   typical range: {}".format(self.typical_range)
         return d
+
+    def typical_range_consistent(self):
+        if self.typical_range == None:
+            return False
+        elif self.typical_range[0] > self.typical_range[1]:
+            return False
+        else:
+            True
+
+
+    def inconsistent_typical_range_stations(self): #Checking the range, task 1F
+        if self.typical_range == None:
+            return False
+        else:
+            if self.typical_range[0] > self.typical_range[1]:
+                return False
+    
+    def relative_water_level(self):
+        if self.latest_level != None and self.typical_range != None:
+            if self.typical_range[0] < self.typical_range[1]:
+                lowbound = self.typical_range[0]
+                upbound = self.typical_range[1]
+                relative = (self.latest_level-lowbound)/(upbound-lowbound)
+                return relative
+    
